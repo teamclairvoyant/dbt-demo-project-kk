@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: corebridge_account_mappings
+    description: This table holds valid account mappings
+    columns:
+      - name: account_id
+        description: valid account_id
+        tests:
+          - unique
+          - not_null
+      - name: account_type
+        description: valid account type
+        tests:
+          - not_null
+     
+    
+  

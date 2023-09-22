@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: corebridge_product_mapping
+    description: This table holds valid account mappings
+    columns:
+      - name: source_product_value
+        description: source product value
+        tests:
+          - unique
+          - not_null
+      - name: cfl_product_value
+        description: cfl product value
+        tests:
+          - not_null
+     

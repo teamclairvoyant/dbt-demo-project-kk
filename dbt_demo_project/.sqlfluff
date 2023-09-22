@@ -1,0 +1,24 @@
+[sqlfluff]
+templater = dbt
+dialect = snowflake
+rules = L001, L002, L003, L004, L005, L006, L007, L008, L009, L011, L012, L013, L017, L018, L019, L022, L023
+
+
+[sqlfluff:templater:dbt]
+project_dir = .
+
+
+[sqlfluff:layout:type:binary_operator]
+line_position = leading
+
+[sqlfluff:rules:capitalisation.keywords] # Keywords
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers] # Unquoted identifiers
+extended_capitalisation_policy = lower
+
+[sqlfluff:layout:type:comma] # Leading/Trailing comma enforcement
+line_position = trailing
+
+[sqlfluff:rules:capitalisation.functions] # Function Names
+capitalisation_policy = lower

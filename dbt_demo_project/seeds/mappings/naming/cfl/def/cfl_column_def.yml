@@ -1,0 +1,15 @@
+version: 2
+
+seeds:
+  - name: cfl_column_def
+    description: This table defines cfl column definitions
+    columns:
+      - name: id
+        description: id
+        tests:
+          - unique
+          - not_null
+      - name: column_name
+        description: column name 
+      - name: column_type
+        description: column type in the data warehouse

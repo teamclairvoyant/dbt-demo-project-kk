@@ -1,0 +1,37 @@
+version: 2
+
+seeds:
+  - name: corebridge_fpsl_transactions
+    config:
+      column_types:
+        account_num: varchar(10)
+        company_code: varchar(10)
+    description: raw transaction data from the provider
+    columns:
+      - name: transaction_id
+        description: event transaction id
+        tests:
+          - unique
+          - not_null
+      - name: account_num
+        description: account number of the policy holder
+        quote: true 
+        tests:
+          - not_null
+      - name: company_code
+        description: code of the credit card company 
+        quote: true 
+        tests:
+        - accepted_values:
+            values: ['C1', 'C2']
+      - name: transaction_date
+        description: date of the transaction
+        tests:
+        - dbt_expectations.expect_column_values_to_be_of_type:
+            column_type: date
+
+      - name: transaction_type
+        description:  type of the transaction
+      - name: amount
+    
+    

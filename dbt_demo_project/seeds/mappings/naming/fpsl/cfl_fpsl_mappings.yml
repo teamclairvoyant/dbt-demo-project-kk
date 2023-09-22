@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: cfl_fpsl_mappings
+    description: This table holds nomenclature mapping between cfl and fpsl
+    columns:
+      - name: cfl_col_name
+        description: cfl column name
+      - name: fpsl_col_name
+        description: fpsl column name

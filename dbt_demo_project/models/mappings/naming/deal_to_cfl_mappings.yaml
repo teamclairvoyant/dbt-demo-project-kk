@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: deal_to_cfl_mappings
+    description: This table holds nomenclature mapping between corebridge fpsl transactions and cfl
+    columns:
+      - name: deal_name
+        description: deal name
+      - name: source_col_name
+        description: source column name
+      - name: cfl_col_name
+        description: cfl column code
+      

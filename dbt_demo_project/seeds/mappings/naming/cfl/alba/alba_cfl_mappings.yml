@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: alba_cfl_mappings
+    description: This table holds nomenclature mapping between alba fpsl transactions and cfl
+    columns:
+      - name: deal_name
+        description: name of the deal
+      - name: source_col_name
+        description: source column name
+      - name: cfl_col_code
+        description: cfl column code
+        tests:
+          - relationships:
+              to: ref('cfl_column_def')
+              field: id
